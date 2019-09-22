@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #d1d1d1;
+}
+
+h1{
+    text-align: center;
+    position: relative;
+    top: 100px;
+    font-family: 'Megrim', cursive;
+    font-size: 70px;
+}
+
+.neon-off{
+    text-shadow: unset;
+}
+
+.neon-on{
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #FFF, 0 0 30px #00ff2a, 0 0 30px #00ff2a, 0 0 30px #00ff2a;
+    animation-name: neon-blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+} 
+
+.mode-button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 350px;
+    height: 200px;
+}
+
+.toggler{
+    width: 70%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 3px solid black;
+    border-radius: 50rem;
+    background-color: #0c0c0c;
+}
+
+.button{
+    position: relative;
+    top: 3px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background: rgb(0,0,0);
+    background: linear-gradient(15deg, #2e2e2e 0%, #353535 54%, #494949 100%);
+}
+
+.button-off{
+    position: relative;
+    top: 3px;
+    left: 5px;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    animation: toggle-day 0.2s ease-out;
+    background: rgb(0,0,0);
+    background: linear-gradient(15deg, #222222 0%, #292929 54%, #3d3d3d 100%);
+}
+
+.button-on{
+    position: relative;
+    top: 3px;
+    left: 143px;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    animation: toggle-night 0.2s ease-out;
+    background: rgb(0,0,0);
+    background: linear-gradient(15deg, #000000 0%, #1b1b1b 54%, #272727 100%);
+}
+
+.diode-off{
+    position: relative;
+    top: 42px;
+    left: 40px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #000000dc;
+}
+
+.diode-on{
+    position: relative;
+    top: 42px;
+    left: 40px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+    -webkit-box-shadow: 0px 0px 10px 1px #d1d1d1;
+    -moz-box-shadow: 0px 0px 10px 1px #d1d1d1;
+    box-shadow: 0px 0px 10px 1px #d1d1d1;
+}
+
+@keyframes toggle-night{
+    0%{left: -5px;}
+    100%{left: 150px;}
+}
+
+@keyframes toggle-day{
+    0%{left: 143px;}
+    100%{left: -5px;}
+}
+
+@keyframes neon-blink{
+    0%{text-shadow: 0 0 10px #FFF, 0 0 30px #00ff2a, 0 0 30px #00ff2a, 0 0 30px #00ff2a; color: #fff;}
+    10%{text-shadow: none; color: #181818;}
+    15%{text-shadow: 0 0 10px #FFF, 0 0 30px #00ff2a, 0 0 30px #00ff2a, 0 0 30px #00ff2a; color: #fff;}
+    20%{text-shadow: none; color: #181818;}
+    25%{text-shadow: 0 0 10px #FFF, 0 0 30px #00ff2a, 0 0 30px #00ff2a, 0 0 30px #00ff2a; color: #fff;}
+    100%{text-shadow: 0 0 10px #FFF, 0 0 30px #00ff2a, 0 0 30px #00ff2a, 0 0 30px #00ff2a; color: #fff;}
+}
